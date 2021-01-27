@@ -7,17 +7,14 @@ import QuizBackground from '../src/components/QuizBackground'
 
 // Criando Compontente BACKGROUND
 
-const BackgroundImage = styled.div`
-background-image: url(${db.bg});
-flex: 1;
-background-size: cover;
-background-position: center;
-`;
+// const BackgroundImage = styled.div`
+// background-image: url(${db.bg});
+// flex: 1;
+// background-size: cover;
+// background-position: center;
+// `;
 
 // Criando Compontente LOGO
-
-
-
 
 // Criando Compontente CONTAINER
 export const QuizContainer = styled.div`
@@ -35,9 +32,10 @@ margin: auto 10%;
 // FUNÇÃO PRINCIPAL RETORNA HTML
 export default function Home() {
   return (
-    <BackgroundImage>
+    
       
-      <QuizContainer backgroundImage={db.bg} >
+      <QuizBackground backgroundImage={db.bg} >
+         <QuizContainer>
         {/* BEGIN CARD 1 */}
         <Widget>
           <Widget.Header>
@@ -57,8 +55,8 @@ export default function Home() {
           </Widget.Content>
         </Widget>
         <Footer />
-      </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/skmonsterr"/>
-    </BackgroundImage>
+        </QuizContainer>
+      </QuizBackground>
   );
 }
