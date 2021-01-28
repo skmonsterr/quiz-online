@@ -1,6 +1,6 @@
 {
     "bg": "https://i.ibb.co/9w0DzJ2/bg-image.gif",
-    "title": "Quiz CSS da Alura",
+    "title": "Quiz - The Witcher 3",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [{
             "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
@@ -31,15 +31,16 @@
     "theme": {
         "colors": {
             "primary": "#f4791f",
-            "secondary": "#00000",
-            "mainBg": "#171B35",
+            "secondary": "#000000",
+            "mainBg": "#696969",
             "contrastText": "#FFFFFF",
             "wrong": "#FF5722",
             "success": "#4CAF50"
         },
 
         "grads": {
-            "primary": "linear-gradient(to right, #000000 50%, #eb5757 90%, #f5af19);"
+            "primary": "linear-gradient(to right, #000000 50%, #eb5757 90%, #f5af19);",
+            "secondary": "linear-gradient(to right, #000000 60%, #eb5757 90%, #f5af19);"
         },
         "borderRadius": "4px"
     }

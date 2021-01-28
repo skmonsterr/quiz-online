@@ -1,20 +1,13 @@
+import React from 'react';
 import styled from 'styled-components'
+import Head from 'next/head';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
-
-// Criando Compontente BACKGROUND
-
-// const BackgroundImage = styled.div`
-// background-image: url(${db.bg});
-// flex: 1;
-// background-size: cover;
-// background-position: center;
-// `;
-
-// Criando Compontente LOGO
+import QuizLogo from '../src/components/QuizLogo';
 
 // Criando Compontente CONTAINER
 export const QuizContainer = styled.div`
@@ -28,14 +21,22 @@ margin: auto 10%;
 }
 `;
 
-
 // FUNÇÃO PRINCIPAL RETORNA HTML
 export default function Home() {
-  return (
-    
-      
+  return (   
       <QuizBackground backgroundImage={db.bg} >
+
+        {/* BEGIN HEAD */}
+        <Head>
+          <title>Quiz - The Witcher 3</title>
+        </Head>
+
+         {/* BEGIN LOGO AND CARDS */}
          <QuizContainer>
+
+        {/* BEGIN LOGO */}
+         <QuizLogo />
+
         {/* BEGIN CARD 1 */}
         <Widget>
           <Widget.Header>
@@ -45,17 +46,22 @@ export default function Home() {
             <p>Lorem Ipum Dolor Sit Amet</p>
           </Widget.Content>           
         </Widget>
+
         {/* BEGIN CARD 2  */}
         <Widget>
           <Widget.Header>
-            <h1>Dicas -&gt;</h1>
+            <h1>Quiz da galera -&gt;</h1>
           </Widget.Header>
           <Widget.Content>
             <p>Lorem Ipum Dolor Sit Amet</p>
           </Widget.Content>
         </Widget>
+
+        {/* BEGIN FOOTER */}
         <Footer />
-      <GitHubCorner projectUrl="https://github.com/skmonsterr"/>
+
+        {/* BEGIN GITHUBCORNER */}
+      <GitHubCorner projectUrl="https://github.com/"/>
         </QuizContainer>
       </QuizBackground>
   );
