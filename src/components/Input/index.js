@@ -13,6 +13,24 @@ background-color: ${({ theme }) => theme.colors.mainBg};
 border-radius: ${({ theme }) => theme.borderRadius};
 outline: 0;
 margin-bottom: 25px;
+
+/* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+  color:${({ theme }) => theme.colors.secondary};
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: ${({ theme }) => theme.colors.secondary};
+}
+/* IE 10+ */
+:-ms-input-placeholder {
+  color: ${({ theme }) => theme.colors.secondary};
+}
+/* Firefox 18- */
+:-moz-placeholder {
+  color: ${({ theme }) => theme.colors.secondary};
+}
+
 `;
 
 export default function Input({ onChange, placeholder }){

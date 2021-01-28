@@ -1,7 +1,7 @@
 {
     "bg": "https://i.ibb.co/9w0DzJ2/bg-image.gif",
     "title": "Quiz - The Witcher 3",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "description": "Teste os seus conhecimentos sobre Witcher 3",
     "questions": [{
             "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
             "title": "Como fazer um seletor por id via CSS?",
@@ -32,6 +32,7 @@
         "colors": {
             "primary": "#f4791f",
             "secondary": "#000000",
+            "third": "#353839",
             "mainBg": "#696969",
             "contrastText": "#FFFFFF",
             "wrong": "#FF5722",

@@ -15,7 +15,7 @@ import Button from "../src/components/Button";
 
 
 // Criando Compontente CONTAINER
-export const QuizContainer = styled.div`
+const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
   padding-top: 45px;
