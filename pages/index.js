@@ -1,12 +1,14 @@
-import React from 'react';
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import styled from 'styled-components';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+
 
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
 
 // Criando Compontente CONTAINER
@@ -23,6 +25,10 @@ margin: auto 10%;
 
 // FUNÇÃO PRINCIPAL RETORNA HTML
 export default function Home() {
+  // Por padrão declarar aqui os hooks
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+  
   return (   
       <QuizBackground backgroundImage={db.bg} >
 
@@ -43,7 +49,26 @@ export default function Home() {
             <h1>The Witcher 3</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Lorem Ipum Dolor Sit Amet</p>
+            <form onSubmit={function (e){
+              e.preventDefault();
+              // -> Rotas          
+              // router manda para a próxima página
+              router.push(`/quiz/?name=${name}`);
+              console.log('Submit with react');   
+            }}
+            >
+            <input 
+            onChange={function(e){
+              // State 
+              //name = e.target.value;
+              setName(e.target.value);
+            }}
+            placeholder="Digite seu nome"
+            />
+            <button type="submit" disabled={name.length === 0 }>
+              Vamos jogar {name}! 
+            </button>
+            </form>
           </Widget.Content>           
         </Widget>
 

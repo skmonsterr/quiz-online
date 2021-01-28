@@ -1,6 +1,7 @@
-import { ThemeProvider } from "styled-components";
-import { createGlobalStyle } from "styled-components";
-import db from "../db.json";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
 * {
